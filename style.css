@@ -1,0 +1,96 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #02315E;
+}
+
+.clock {
+    position: relative;
+    width: 350px;
+    height: 350px;
+    background-color: #abb2e1;
+    border-radius: 50%;
+    border: 2px solid coral;
+}
+
+.numbers {
+    font-size: 28px;
+    font-weight: bolder;
+}
+
+.twelve {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.three {
+    position: absolute;
+    right: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.six {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nine {
+    position: absolute;
+    top: 50%;
+    left: 6px;
+    transform: translateY(-50%);
+}
+
+.hand {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hand::before {
+    content: "";
+    width: 25px;
+    height: 25px;
+    background-color: #1b1341;
+    border-radius: 50%;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, .7);
+    z-index: 3;
+}
+
+.hand div {
+    width: 7px;
+    height: 100px;
+    background-color: white;
+    position: absolute;
+    bottom: 50%;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, .7);
+    border-radius: 50% 50% 0 0;
+    transform-origin: bottom center;
+    z-index: 2;
+}
+
+.hand .hour {
+    height: 80px;
+    transform: rotate(30deg);
+}
+
+.hand .second {
+    transform: rotate(250deg);
+    background-color: #dc5d21;
+}
